@@ -1,0 +1,116 @@
+body {
+	font-family: Helvetica, Arial;
+	background-color: rgb(192,192,192);
+	margin: 0;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: serif;
+}
+
+h1, .h1 {
+	font-size: 2.5rem;
+}
+h2, .h2 {
+	font-size: 2rem;
+}
+h3, .h3 {
+	font-size: 1.7rem;
+}
+h6, .h6 {
+	font-size: 1rem;
+}
+
+.main-header {
+	background-color: maroon;
+	color: white;
+	border-radius: 1em;
+	padding: 1em;
+	position: relative;
+}
+
+	.main-header::after {
+		content: attr(data-price);
+		position: absolute;
+		top: 1em;
+		left: 1em;
+		background-color: green;
+		color: white;
+		border-radius: 100%;
+		display: block;
+		width: 1.5em;
+		height: 1em;
+		padding: 1em;
+	}
+
+	.main-header--bgaqua {
+		background-color: aqua;
+	}
+	.main-header__title {
+		color: olive;
+	}
+
+.center {
+	text-align: center;
+}
+
+input:required {
+	background-color: olive;
+}
+
+.facebook {
+	cursor: pointer;
+	-webkit-transition: all 1 ease-in;
+	transition: all 1 ease-in;
+}
+
+.facebook::before {
+	content: "";
+	display: inline-block;
+	font-size: .8em;
+	color: blue;
+	width: 1em;
+	height: 1em;
+	background-image: url("https://i.imgur.com/rl2cGPK.png");
+	background-size: cover;
+	margin-right: 1em;
+	opacity: 0;
+}
+
+.facebook:hover::before {
+	opacity: 1;
+}
+
+.red-social::after {
+	content: " Followers: "attr(data-followers);
+}
+
+.cajita {
+	width: 33.333333%;
+	height: 100px;
+	background-color: salmon;
+	border-top: 1px solid aqua;
+	border-right: 0px solid aqua;
+	border-bottom: 1px solid aqua;
+	border-left: 1px solid aqua;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+
+	margin-bottom: 1em;
+	float: left;	
+}
+
+.cajita:last-child {
+	border-right: 1px solid aqua;
+}
